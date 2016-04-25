@@ -1,18 +1,19 @@
 @import 'settings';
 @import 'foundation';
 
-@mixin mix-background() {
-    background-color: whitesmoke; 
-}
 
 /*=============================
 =            Index            =
 =============================*/
 .pages-index {
 
+    @mixin mix-background() {
+        background-color: whitesmoke; 
+    }
+
     $header-font: 'Helvetica Neue', Helvetica, arial, sans-serif; 
     $body-font: Arial, sans-serif; 
-    $dark-red: #C42026; 
+    $dark-red: #C42026;
 
     p {
         font-size: $global-font-size; 
@@ -30,6 +31,7 @@
     /*----------  presents  ----------*/    
     .presents {
         @include mix-background(); 
+
         .intro {
             h2 {
                 font-family: $header-font; 
@@ -93,14 +95,33 @@
 
     /*----------  events  ----------*/
     .events {
+        @include mix-background(); 
+        border-top: 1px solid gray; border-bottom: 1px solid gray; 
+
+        .header {
+            font-size: 30px; 
+            padding-bottom: 0; 
+            margin-bottom: 0; 
+
+            h2 {
+                border-top: 1px solid gray; 
+                padding-top: 2px; 
+            }
+        }
 
         .calendar {
+            padding-bottom: 0; 
+            margin-bottom: 0; 
+
             .month { 
                 padding-bottom: 0; 
                 margin-bottom: 0; 
-                h3 {                    
-                    font-size: 18px;   
+
+                h3 {
+                    background-color: $dark-red;                    
+                    font-size: 22px;   
                     padding:15px; 
+                    padding-bottom: 0; 
                     margin-bottom: 0; 
                     color: whitesmoke; 
                 }            
@@ -109,13 +130,30 @@
                 h3 {
                     border: 1px solid $dark-red; 
                     padding-top: 5px;  padding-bottom: 5px; 
+                    font-size: 30px; 
+                    font-weight: 700; 
                 }               
             }
         }
+        .description {
+            padding-bottom: 0; 
+            margin-bottom: 0; 
 
-        .test  {
-            background-color: $dark-red;
+            h3 {
+                font-family: $header-font; 
+                font-weight: 100; 
+                letter-spacing: 1px; 
+                color: $dark-red; 
+            }
+            p {
+                font-family: $body-font; 
+                font-weight: 200; 
+            }
         }
+
+        // .test  {
+        //     background-color: $dark-red;
+        // }
 
     }
 
