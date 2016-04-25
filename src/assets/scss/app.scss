@@ -1,0 +1,126 @@
+@import 'settings';
+@import 'foundation';
+
+@mixin mix-background() {
+    background-color: whitesmoke; 
+}
+
+/*=============================
+=            Index            =
+=============================*/
+.pages-index {
+
+    $header-font: 'Helvetica Neue', Helvetica, arial, sans-serif; 
+    $body-font: Arial, sans-serif; 
+    $dark-red: #C42026; 
+
+    p {
+        font-size: $global-font-size; 
+        line-height: $global-font-size * 1.5; 
+    }
+    hr {
+        border: none; 
+    }
+
+    /*----------  header-image  ----------*/    
+    .header-image { 
+        @include mix-background(); 
+    }
+
+    /*----------  presents  ----------*/    
+    .presents {
+        @include mix-background(); 
+        .intro {
+            h2 {
+                font-family: $header-font; 
+                color: green !important;   
+                font-weight: bold;  
+                letter-spacing: 1px;      
+            }
+            span {
+                font-size: 30px !important;
+                line-height: 45px; 
+                font-weight: 100; 
+                color: $dark-red; 
+            }
+        }
+        .content {
+            font-family: $body-font ;
+
+            p {
+                font-family: inherit; 
+            }         
+        }
+    }
+
+    /*----------  Action  ----------*/
+    .action {
+        background: $dark-red; 
+
+        h2, p {
+            color: whitesmoke; 
+        }
+
+        h2 {
+            font-family: $header-font; 
+            font-weight: 100; 
+            letter-spacing: 1px; 
+            padding-top: 10px; 
+        }
+        p {
+            font-family: $body-font; 
+        }
+        .style-button {
+            td {
+                background-color: whitesmoke; 
+                color: $dark-red; 
+                border-radius: 5px ; 
+                -moz-border-radius: 5px ;
+                -ms-border-radius: 5px ;
+                -o-border-radius: 5px ;
+                -ms-border-radius: 5px ; 
+                -webkit-border-radius: 5px ;       
+
+                * {
+                    color: inherit; 
+                }
+            }
+            *:hover {
+                color: lighten($dark-red, 10%); 
+            }
+        }
+    }
+
+    /*----------  events  ----------*/
+    .events {
+
+        .calendar {
+            .month { 
+                padding-bottom: 0; 
+                margin-bottom: 0; 
+                h3 {                    
+                    font-size: 18px;   
+                    padding:15px; 
+                    margin-bottom: 0; 
+                    color: whitesmoke; 
+                }            
+            }
+            .day { 
+                h3 {
+                    border: 1px solid $dark-red; 
+                    padding-top: 5px;  padding-bottom: 5px; 
+                }               
+            }
+        }
+
+        .test  {
+            background-color: $dark-red;
+        }
+
+    }
+
+
+}
+/*=====  End of Index  ======*/
+
+
