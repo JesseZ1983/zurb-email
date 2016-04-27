@@ -1,0 +1,25 @@
+.footer {
+    $header-font: 'Helvetica Neue', Helvetica,  arial, sans-serif; 
+    $body-font: Arial, sans-serif; 
+
+    height: 100px; 
+    background-color: #696969; 
+
+    .footer-wrap {
+        background-color: #696969; 
+        color: whitesmoke; 
+
+        p {
+            color: whitesmoke;
+            font-family: $header-font; 
+            font-size: 14px;  
+        }
+        .settings {
+            color:  lighten(#b76e79, 30%); 
+            letter-spacing: 1px; 
+        }
+
+
+    }
+
+}
